@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: "space";
+  src: url("/src/font/space.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "spaceBold";
+  src: url("/src/font/space-bold.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.font-space {
+  font-family: "space", sans-serif;
+}
+
+.font-bold-space {
+  font-family: "spaceBold", sans-serif;
+}
+
+.text-green {
+  color: #4caf50;
+}
+
+.text-bold-green {
+  color: #2e7d32;
+}
+
+.bg-green {
+  background-color: #4caf50;
+}
+
+.bg-bold-green {
+  background-color: #2e7d32;
+}
