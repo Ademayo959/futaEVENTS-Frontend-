@@ -15,12 +15,16 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className="flex gap-4">
-                    <div className="border cursor-pointer border-gray-200 px-5 py-1 w-fit rounded-lg">
-                        <p>Log In</p>
-                    </div>
-                    <div className="px-5 py-1 cursor-pointer w-fit rounded-lg bg-green text-white">
-                        <p>Sign Up</p>
-                    </div>
+                    <Link to="/login">
+                        <div className="border cursor-pointer border-gray-200 px-5 py-1 w-fit rounded-lg">
+                            <p>Log In</p>
+                        </div>
+                    </Link>
+                    <Link to="/signup">
+                        <div className="px-5 py-1 cursor-pointer w-fit rounded-lg bg-green text-white">
+                            <p>Sign Up</p>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>

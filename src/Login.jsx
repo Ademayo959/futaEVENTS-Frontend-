@@ -5,7 +5,7 @@ const Login = () => {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false)
 
     return (
-        <div className="bg-[url('./assets/loginBg5.jpeg')] h-screen w-full bg-cover bg-no-repeat overflow-hidden font-space flex items-center justify-center">
+        <div className="bg-[url('./assets/loginBg13.png')] h-screen w-full bg-cover bg-no-repeat overflow-hidden font-space flex items-center justify-center">
             <div className="bg-white rounded-2xl w-100 p-8">
                 <p className="font-bold-space text-[1.8rem]">Welcome Back</p>
                 <p className="text-gray-500 text-[0.8rem]">Log in to see what's happening on campus</p>

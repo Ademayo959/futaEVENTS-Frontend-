@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import cup from "./assets/greencup.png"
 import confetti from "./assets/confetti2.png"
 import balloon from "./assets/balloon.png"
@@ -32,7 +33,7 @@ const Landing = () => {
     ]
 
     return (
-        <div className="relative  h-screen font-space">
+        <div className="relative  h-screen font-space dark:bg-[#1a">
             <Navbar />
             <div className="mt-24">
                 <img src={cup} alt="" className="absolute -left-46 rotate-45 w-100 top-70 max-sm:hidden" />
@@ -50,9 +51,11 @@ const Landing = () => {
                     </div>
                     <div className="justify-self-center">
                         <p className="text-gray-400 text-[1.2rem] text-center w-130 justify-self-center mt-12 mb-4">One platform to discover, save, and attend every event happening on campus.</p>
-                        <div className="bg-green py-3 px-12 w-fit rounded-3xl justify-self-center text-white">
-                            <p className="text-[1.1rem]">See what's happening</p>
-                        </div>
+                        <Link to="/dashboard">
+                            <div className="bg-green py-3 px-12 w-fit rounded-3xl justify-self-center text-white">
+                                <p className="text-[1.1rem]">See what's happening</p>
+                            </div>
+                        </Link>
                         <div className="flex items-center justify-self-center my-7">
                             <div className="h-8 w-8 rounded-full bg-green-300 border border-white"></div>
                             <div className="h-8 w-8 rounded-full bg-green-300 -ml-3 border border-white"></div>

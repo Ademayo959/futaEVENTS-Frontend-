@@ -5,7 +5,7 @@ const Signup = () => {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false)
 
     return (
-        <div className="bg-[url('./assets/loginBg5.jpeg')] h-screen w-full bg-cover bg-no-repeat overflow-hidden font-space flex items-center justify-center">
+        <div className="bg-[url('./assets/loginBg13.png')] h-screen w-full bg-cover bg-no-repeat overflow-hidden font-space flex items-center justify-center">
             <div className="bg-white rounded-2xl w-100 p-8">
                 <p className="font-bold-space text-[1.8rem] flex gap-1 items-center">Join <p className="text-[1.8rem] font-extrabold">futa<span className="text-green">EVENTS</span></p></p>
                 <p className="text-gray-500 text-[0.8rem] w-[85%]">Create your account and never miss a campus event.</p>
@@ -29,9 +29,8 @@ const Signup = () => {
                         </div>
                     </div>
                     <div className="my-2">
-                        <div className="flex justify-between my-1">
+                        <div className="flex my-1">
                             <p className="text-[0.9rem]">Password</p>
-                            <p className="text-green text-[0.8rem]">Forgot password?</p>
                         </div>
                         <div className="flex gap-2 items-center w-full border border-gray-200 px-2 rounded-lg bg-gray-100">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.0} stroke="currentColor" className="h-4.5 w-4.5 text-gray-500">

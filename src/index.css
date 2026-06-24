@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
   font-family: "space";
@@ -27,12 +27,20 @@
   color: #4caf50;
 }
 
+.dark-mode-green {
+  color: #388e3c;
+}
+
 .text-bold-green {
   color: #2e7d32;
 }
 
 .bg-green {
   background-color: #4caf50;
+}
+
+.dark-mode-bg-green {
+  background-color: #388e3c;
 }
 
 .bg-bold-green {
