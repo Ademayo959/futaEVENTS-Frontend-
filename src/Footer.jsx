@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <div>
-            <div className="max-w-7xl mx-auto flex justify-between items-center w-full py-8">
+            <div className="max-w-7xl mx-auto flex justify-between items-center w-full py-8 max-lg:px-4 max-md:px-3">
                 <div>
                     <p className="text-[1.5rem] font-extrabold">futa<span className="text-green">EVENTS</span></p>
                     <p className="text-gray-500">Your Campus, Your Events.</p>

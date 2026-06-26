@@ -6,9 +6,9 @@ const FAQ = ({faqs}) => {
     return (
         <div className="font-bricolage mb-18">
             <div>
-                <div className="justify-self-center border bg-white border-gray-300 rounded-2xl mt-12 grid max-sm:px-2">
+                <div className="justify-self-center border bg-white border-gray-300 rounded-2xl mt-12 grid max-sm:px-2 max-md:bg-transparent max-md:border-0">
                     {faqs.map((faq, index) => (
-                        <div key={index} className="border-b border-gray-300 w-150 p-3 max-sm:w-full max-sm:rounded-2xl max-sm:p-1">
+                        <div key={index} className="border-b border-gray-300 w-150 p-3 max-sm:w-full max-sm:p-1">
                             <div className="flex items-center justify-between p-2" onClick={() => setOpenIndex(openIndex == index ? null : index)}>
                                 <p className="text-black">{faq.question}</p>
                                 <span className="ml-4">{openIndex === index ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-5 w-5 text-gray-500">

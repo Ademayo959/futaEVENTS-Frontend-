@@ -33,24 +33,24 @@ const Landing = () => {
     ]
 
     return (
-        <div className="relative  h-screen font-space dark:bg-[#1a">
+        <div className="relative h-screen font-space max-lg:overflow-x-hidden">
             <Navbar />
-            <div className="mt-24">
-                <img src={cup} alt="" className="absolute -left-46 rotate-45 w-100 top-70 max-sm:hidden" />
-                <img src={confetti} alt="" className="absolute -left-29 rotate-275 w-100 top-40 max-sm:hidden" />
-                <img src={ticket} alt="" className="absolute -right-56 -rotate-135 w-120 top-70 max-sm:hidden" />
-                <img src={confetti} alt="" className="absolute -right-26 rotate-0 w-100 top-40 max-sm:hidden" />
+            <div className="mt-24 max-md:mt-18">
+                <img src={cup} alt="" className="absolute z-0 -left-46 rotate-45 w-100  max-lg:w-80 top-70 max-lg:-left-55 max-sm:hidden" />
+                <img src={confetti} alt="" className="absolute z-0 -left-29 rotate-275 w-100 top-40 max-lg:-left-50 max-sm:hidden" />
+                <img src={ticket} alt="" className="absolute z-0 -right-56 -rotate-135 w-120 max-lg:w-100 max-lg:-right-65 top-70 max-sm:hidden" />
+                <img src={confetti} alt="" className="absolute z-0 -right-26 rotate-0 w-100 top-40 max-lg:-right-50 max-sm:hidden" />
                 <div>
-                    <div className="bg-green-100 rounded-2xl w-fit px-4 py-1 flex gap-2 items-center justify-self-center text-center my-8">
+                    <div className="bg-green-100 rounded-2xl w-fit px-4 py-1 flex gap-2 items-center justify-self-center text-center my-8 max-md:my-4">
                         <div className="h-2 w-2 bg-bold-green rounded-full"></div>
                         <p className="text-bold-green font-extrabold">Built for FUTA students</p>
                     </div>
-                    <div className="text-center leading-21">
-                        <p className="text-[5rem] font-bold-space tracking-tighter">Every Event.</p>
-                        <p className="text-[5rem] font-bold-space tracking-tighter">Every Corner of <span className="text-green">FUTA.</span></p>
+                    <div className="text-center leading-21 font-space max-md:leading-19">
+                        <p className="text-[5rem] font-bold-space tracking-tighter max-lg:text-[4.1rem] max-md:font-space max-md:text-[3.7rem] z-10">Every Event.</p>
+                        <p className="text-[5rem] font-bold-space tracking-tighter max-lg:text-[4.1rem] max-md:font-space max-md:text-[3.7rem] z-10">Every Corner of <span className="text-green">FUTA.</span></p>
                     </div>
                     <div className="justify-self-center">
-                        <p className="text-gray-400 text-[1.2rem] text-center w-130 justify-self-center mt-12 mb-4">One platform to discover, save, and attend every event happening on campus.</p>
+                        <p className="text-gray-400 text-[1.2rem] text-center w-130 justify-self-center mt-12 mb-4 max-md:w-[90%]">One platform to discover, save, and attend every event happening on campus.</p>
                         <Link to="/dashboard">
                             <div className="bg-green py-3 px-12 w-fit rounded-3xl justify-self-center text-white">
                                 <p className="text-[1.1rem]">See what's happening</p>
@@ -68,9 +68,9 @@ const Landing = () => {
                 </div>
                 <div className="justify-self-center py-6 mt-8">
                     <p className="text-green font-extrabold text-[15px] text-center">HOW IT WORKS</p>
-                    <p className="text-[3rem] font-extrabold text-center">Three steps. Zero stress</p>
-                    <div className="grid grid-cols-3 gap-12 my-8">
-                        <div className="w-80">
+                    <p className="text-[3rem] font-extrabold text-center max-lg:text-[2.5rem]">Three steps. Zero stress</p>
+                    <div className="grid grid-cols-3 gap-12 my-8 max-md:grid-cols-1 max-md:justify-self-center max-lg:px-6">
+                        <div className="w-full">
                             <div className="my-2 justify-self-center">
                                 <div className="bg-green z-10 relative text-white ml-8 h-6 w-6 flex items-center justify-center rounded-full">
                                     <p>1</p>
@@ -84,7 +84,7 @@ const Landing = () => {
                             <p className="text-center font-extrabold text-[1.2rem]">Search</p>
                             <p className="text-gray-500 text-center text-[0.9rem]">Type in what you're looking for - a genre, a department, a keyword. Find it fast.</p>
                         </div>
-                        <div className="w-80">
+                        <div className="w-full">
                             <div className="my-2 justify-self-center">
                                 <div className="bg-green z-10 relative text-white ml-8 h-6 w-6 flex items-center justify-center rounded-full">
                                     <p>2</p>
@@ -98,7 +98,7 @@ const Landing = () => {
                             <p className="text-center font-extrabold text-[1.2rem]">Discover</p>
                             <p className="text-gray-500 text-center text-[0.9rem]">Stumble on events you knew existed. From underground hangouts to major campus shows</p>
                         </div>
-                        <div className="w-80">
+                        <div className="w-full">
                             <div className="my-2 justify-self-center">
                                 <div className="bg-green z-10 relative text-white ml-8 h-6 w-6 flex items-center justify-center rounded-full">
                                     <p>3</p>
@@ -116,9 +116,9 @@ const Landing = () => {
                 </div>
                 <div className="justify-self-center py-6 mt-8">
                     <p className="text-green font-extrabold text-[15px] text-center">WHY FUTAEVENTS</p>
-                    <p className="text-[3rem] font-extrabold text-center">Built Different. On purpose.</p>
-                    <div className="grid grid-cols-3 gap-12 my-8">
-                        <div className="w-80 border p-8 border-gray-300 rounded-3xl">
+                    <p className="text-[3rem] font-extrabold text-center max-lg:text-[2.5rem]">Built Different. On purpose.</p>
+                    <div className="grid grid-cols-3 gap-12 my-8 max-lg:gap-4 max-md:grid-cols-1 max-md:justify-self-center max-lg:px-4">
+                        <div className="w-80 max-lg:w-full max-lg:p-5 border p-8 border-gray-300 rounded-3xl">
                             <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
@@ -127,7 +127,7 @@ const Landing = () => {
                             <p className="font-extrabold text-[1.1rem] my-3">No More Missing Out</p>
                             <p className="text-gray-500 text-[0.9rem]">Never be the last to hear about an event on campus. Stay in the loop, always.</p>
                         </div>
-                        <div className="w-80 border p-8 border-gray-300 rounded-3xl">
+                        <div className="w-80 max-lg:w-full max-lg:p-5 border p-8 border-gray-300 rounded-3xl">
                             <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
@@ -136,14 +136,14 @@ const Landing = () => {
                             <p className="font-extrabold text-[1.1rem] my-3">Everything in One Place</p>
                             <p className="text-gray-500 text-[0.9rem]">Tech talks, parties, sports, academic events - all here, all organised, no hunting around.</p>
                         </div>
-                        <div className="w-80 border p-8 border-gray-300 rounded-3xl">
+                        <div className="w-80 max-lg:w-full max-lg:p-5 border p-8 border-gray-300 rounded-3xl">
                             <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
                                 </svg>
                             </div>
                             <p className="font-extrabold text-[1.1rem] my-3">Built for FUTA, By FUTA</p>
-                            <p className="text-gray-500 text-[0.9rem]">This isn't a generic app. It wasmaee by people who walk the same paths you do. It's yours.</p>
+                            <p className="text-gray-500 text-[0.9rem]">This isn't a generic app. It was made by people who walk the same paths you do. It's yours.</p>
                         </div>
                     </div>
                 </div>
