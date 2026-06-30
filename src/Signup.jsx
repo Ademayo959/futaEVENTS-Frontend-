@@ -12,7 +12,21 @@ const Signup = () => {
     async function handleSignup(e) {
         e.preventDefault();
 
-        const response = await fetch("")
+        const response = await fetch("https://futa-events-api.onrender.com/user/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                fullName,
+                password,
+                email
+            })
+        })
+
+        const data = response.json();
+        console.log(data)
+
     }
 
 

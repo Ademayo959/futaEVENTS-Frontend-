@@ -1,4 +1,49 @@
+import { useState } from "react";
+
 const CreateEventModal = ({ setIsModalVisible }) => {
+    const [title, setTitle] = useState("");
+    const [location, setLocation] = useState("");
+    const [date, setDate] = useState();
+    const [category, setCategory] = useState();
+    const [guests, setGuests] = useState([]);
+    const [number, setNumber] = useState();
+    const [registrationLink, setregistrationLink] = useState("");
+    const [host, setHost] = useState("");
+    const [description, setDescription] = useState("");
+
+    async function postEvent() {
+        e.preventDefault()
+
+        const token = localStorage.getItem("token")
+
+        const response = await fetch("https://futa-events-api.onrender.com/events", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+                "Authorization": `Bearer ${token}`
+            },
+            body: JSON.stringify({
+                title,
+                description,
+                date,
+                category,
+                location,
+                host,
+                number,
+                guests,
+                registrationLink
+            })
+        })
+
+        const data = response.json();
+
+        if (response.ok) {
+            console.log(data.message)
+        }
+
+    }
+
+
     return (
         <div className="flex justify-center items-center w-screen h-screen">
             <div onClick={(e) => { e.stopPropagation() }} className=" bg-white w-[35%] self-center p-6 rounded-xl dark:bg-[#1a2e1a] ">
@@ -12,43 +57,43 @@ const CreateEventModal = ({ setIsModalVisible }) => {
                 </div>
                 <div className="grid gap-1 mt-6 ">
                     <p className="text-[1.05rem] font-extrabold dark:text-gray-100">Event Title <span className="text-red-500 text-sm">*</span></p>
-                    <input type="text" placeholder="e.g Inter-Faculty Football Tournament" className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
+                    <input onChange={(e) => { setTitle(e.target.value) }} type="text" placeholder="e.g Inter-Faculty Football Tournament" className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
                 </div>
                 <div className="grid gap-1 mt-2">
                     <p className="text-[1.05rem] font-extrabold dark:text-gray-100">Location</p>
-                    <input type="text" placeholder="e.g Senate Building, New Hall" className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
+                    <input onChange={(e) => { setLocation(e.target.value) }} type="text" placeholder="e.g Senate Building, New Hall" className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
                 </div>
                 <div className="grid grid-cols-2 gap-4 mt-2">
                     <div>
                         <p className="text-[1.05rem] font-extrabold dark:text-gray-100">Date <span className="text-red-500 text-sm">*</span></p>
-                        <input type="date" className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
+                        <input onChange={(e) => { setDate(e.target.value) }} type="date" className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
                     </div>
                     <div>
                         <p className="text-[1.05rem] font-extrabold dark:text-gray-100">Category <span className="text-red-500 text-sm">*</span></p>
-                        <input type="text" placeholder="e.g " className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
+                        <input onChange={(e) => { setCategory(e.target.value) }} type="text" placeholder="e.g " className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
                     </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4 mt-2">
                     <div>
                         <p className="text-[1.05rem] font-extrabold dark:text-gray-100">Guests</p>
-                        <input type="text" placeholder="e.g SRC Executives" className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
+                        <input onChange={(e) => { setGuests(e.target.value) }} type="text" placeholder="e.g SRC Executives" className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
                     </div>
                     <div>
                         <p className="text-[1.05rem] font-extrabold dark:text-gray-100">Phone Number</p>
-                        <input type="text" placeholder="e.g 08012344546" className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
+                        <input onChange={(e) => { setNumber(e.target.value) }} type="text" placeholder="e.g 08012344546" className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
                     </div>
                 </div>
                 <div className="grid gap-1 mt-2">
                     <p className="text-[1.05rem] font-extrabold dark:text-gray-100">Registration Link</p>
-                    <input type="text" placeholder="e.g Google Form" className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
+                    <input onChange={(e) => { setregistrationLink(e.target.value) }} type="text" placeholder="e.g Google Form" className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
                 </div>
                 <div className="grid gap-1 mt-2">
                     <p className="text-[1.05rem] font-extrabold dark:text-gray-100">Host</p>
-                    <input type="text" placeholder="e.g Google Form" className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
+                    <input onChange={(e) => { setHost(e.target.value) }} type="text" placeholder="e.g Google Form" className="bg-gray-50 w-full border border-gray-300 h-9 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" />
                 </div>
                 <div className="grid gap-1 mt-2">
                     <p className="text-[1.05rem] font-extrabold dark:text-gray-100">Description <span className="text-red-500 text-sm">*</span></p>
-                    <textarea placeholder="What's this event about?" className="bg-gray-50 resize-none w-full py-2 border border-gray-300 h-18 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" ></textarea>
+                    <textarea onChange={(e) => { setDescription(e.target.value) }} placeholder="What's this event about?" className="bg-gray-50 resize-none w-full py-2 border border-gray-300 h-18 rounded-lg px-3 placeholder:text-[0.9rem] dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" ></textarea>
                 </div>
                 <div className="mt-4 bg-bold-green text-white h-10 cursor-pointer items-center flex justify-center rounded-lg">
                     <p className="text-center dark:text-gray-100">Post Event</p>
