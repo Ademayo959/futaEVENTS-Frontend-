@@ -119,20 +119,20 @@ const Dashboard = () => {
 
     return (
         <div className="font-space bg-gray-100 dark:bg-[#0f1a0f] overflow-hidden">
-            <div className="border-b py-3 bg-white dark:bg-[#1a2e1a] border-gray-300 dark:border-gray-700">
-                <div className="max-w-7xl mx-auto flex justify-between items-center">
+            <div className="border-b py-3 bg-white dark:bg-[#1a2e1a] border-gray-300 dark:border-gray-700 max-lg:px-3">
+                <div className="max-w-7xl mx-auto flex justify-between items-center max-sm:gap-6">
                     <div>
                         <Link to="/" className="cursor-pointer">
-                            <p className="text-[35px] font-extrabold dark:text-gray-100">futa<span className="text-green">EVENTS</span></p>
+                            <p className="text-[35px] font-extrabold dark:text-gray-100 max-sm:text-[1.2rem]">futa<span className="text-green">EVENTS</span></p>
                         </Link>
                     </div>
-                    <div className="flex gap-3 items-center">
+                    <div className="flex gap-3 items-center max-sm:gap-2">
                         <div>
-                            <input type="text" className="h-9 bg-gray-100 w-100 px-2 dark:bg-[#0f1a0f] dark:placeholder:text-gray-300" placeholder="Search events..." />
+                            <input type="text" className="h-9 bg-gray-100 w-100 px-2 dark:bg-[#0f1a0f] dark:placeholder:text-gray-300 max-lg:w-80 max-sm:h-8 max-sm:w-full" placeholder="Search events..." />
                         </div>
                         <div>
-                            <div className="bg-green-100 h-11 w-11 flex items-center justify-center rounded-full dark:bg-green-900">
-                                <p className="text-green-700 font-extrabold text-[1.2rem] dark:text-green-200">OA</p>
+                            <div className="bg-green-100 h-11 w-11 flex items-center justify-center rounded-full max-sm:h-7 max-sm:w-7 dark:bg-green-900">
+                                <p className="text-green-700 font-extrabold text-[1.2rem] dark:text-green-200 max-sm:text-[0.7rem]">OA</p>
                             </div>
                         </div>
                         <div onClick={() => {
@@ -152,12 +152,12 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className="max-w-7xl mx-auto  w-full py-4 ">
-                <div className="flex justify-between items-end">
+                <div className="flex justify-between items-end max-lg:px-3 max-sm:grid max-sm:gap-3">
                     <div>
                         <p className="font-bold-space text-[1.9rem] dark:text-gray-100">What's Happening</p>
                         <p className="text-gray-500 text-[0.9rem] dark:text-gray-400">Latest events across FUTA campus</p>
                     </div>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 max-sm:flex-wrap">
                         <div className="bg-white border border-gray-300 px-3 py-1 rounded-lg w-fit dark:border-gray-700 dark:bg-[#1e2a1e]">
                             <p className="text-gray-500 dark:text-gray-400">Tech</p>
                         </div>
@@ -175,7 +175,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-                <div className="columns-4 my-8">
+                <div className="columns-4 my-8 max-lg:columns-3 max-sm:columns-1 max-sm:px-4">
                     {events.map((event) => (
                         <div className="w-full rounded-2xl bg-white h-fit border border-gray-300 p-4 mb-4 break-inside-avoid dark:border-gray-700 dark:bg-[#1e2a1e]">
                             <div className="bg-green-100 px-2 py-1 rounded-md w-fit dark:bg-green-900">
@@ -209,7 +209,7 @@ const Dashboard = () => {
                         </div>
                     ))}
                 </div>
-                <div onClick={() => { setIsModalVisible(true) }} className="right-15 top-[85vh] fixed bg-green h-16 w-16 rounded-full flex items-center justify-center cursor-pointer shadow-lg dark:bg-red-600">
+                <div onClick={() => { setIsModalVisible(true) }} className="right-15 top-[85vh] fixed bg-green h-16 w-16 rounded-full flex items-center justify-center cursor-pointer shadow-lg max-sm:right-8 max-sm:top-[85vh] dark:bg-red-600">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.0} stroke="currentColor" className="h-10 w-10 text-white">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                     </svg>
