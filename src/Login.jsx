@@ -41,7 +41,7 @@ const Login = () => {
 
     return (
         <div className="bg-[url('./assets/loginBg13.png')] h-screen w-full bg-cover bg-no-repeat overflow-hidden font-space flex items-center justify-center">
-            <div className="bg-white rounded-2xl w-100 p-8">
+            <div className="bg-white rounded-2xl w-100 p-8 m-4">
                 <p className="font-bold-space text-[1.8rem]">Welcome Back</p>
                 <p className="text-gray-500 text-[0.8rem]">Log in to see what's happening on campus</p>
                 <div>
@@ -73,7 +73,7 @@ const Login = () => {
                                 </svg>}
                         </div>
                         <div className="mt-4">
-                            <div className="bg-green flex items-center justify-center h-10 my-3 rounded-lg cursor-pointer">
+                            <div onClick={(e)=> handleLogin(e)} className="bg-green flex items-center justify-center h-10 my-3 rounded-lg cursor-pointer">
                                 <p className="text-white">Log In</p>
                             </div>
                             <p className="text-gray-500 text-center text-[0.8rem]">Don't have an account? <Link to="/signup"><span className="text-green">Sign Up</span></Link></p>
