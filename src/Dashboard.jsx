@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import CreateEventModal from "./CreateEventModal";
+import FooterMobile from "./FooterMobile";
 
 const Dashboard = () => {
     const events = [
@@ -209,11 +210,14 @@ const Dashboard = () => {
                         </div>
                     ))}
                 </div>
-                <div onClick={() => { setIsModalVisible(true) }} className="right-15 top-[85vh] fixed bg-green h-16 w-16 rounded-full flex items-center justify-center cursor-pointer shadow-lg max-sm:right-8 max-sm:top-[85vh] dark:bg-red-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.0} stroke="currentColor" className="h-10 w-10 text-white">
+                <div onClick={() => { setIsModalVisible(true) }} className="right-15 top-[85vh] fixed bg-green h-16 w-16 rounded-full flex items-center justify-center cursor-pointer shadow-lg max-sm:right-8 max-sm:top-[82vh] max-sm:h-13 max-sm:w-13 dark:bg-red-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.0} stroke="currentColor" className="h-10 w-10 text-white max-sm:h-8 max-sm:w-8">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                     </svg>
                 </div>
+            </div>
+            <div className="hidden max-sm:block">
+                <FooterMobile />
             </div>
             {isModalVisible && (<div className="h-screen fixed z-10 inset-0 w-full bg-black/60" onClick={() => { setIsModalVisible(false) }}>
                 <CreateEventModal setIsModalVisible={setIsModalVisible} />
