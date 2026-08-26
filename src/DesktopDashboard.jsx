@@ -6,7 +6,7 @@ import EventDetailModal from "./EventDetailModal";
 const DesktopDashboard = ({ events, isDark, toggleDark, isModalVisible, setIsModalVisible }) => {
     const [selectedEvent, setSelectedEvent] = useState(null);
     return (
-        <div className="font-space bg-gray-100 dark:bg-[#0f1a0f] overflow-hidden">
+        <div className="font-space h-screen bg-gray-100 dark:bg-[#0f1a0f] overflow-hidden">
             <div className="border-b py-3 bg-white dark:bg-[#1a2e1a] border-gray-300 dark:border-gray-700">
                 <div className="max-w-7xl mx-auto flex justify-between items-center">
                     <div>
@@ -88,7 +88,7 @@ const DesktopDashboard = ({ events, isDark, toggleDark, isModalVisible, setIsMod
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="h-3 w-3 text-gray-500 dark:text-gray-400">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                                 </svg>
-                                <p className="text-gray-500 text-[0.8rem] dark:text-gray-400">Posted by <span className="font-extrabold text-black dark:text-gray-100">{event.postedBy}</span></p>
+                                <p className="text-gray-500 text-[0.8rem] dark:text-gray-400">Posted by <span className="font-extrabold text-black dark:text-gray-100">{event.host}</span></p>
                             </div>
                         </div>
                     ))}

@@ -13,7 +13,7 @@ const getCountdown = (eventDateTime) => {
 }
 
 const EventDetailModal = ({ event, onClose }) => {
-    const eventDateTime = new Date(`${event.date} ${event.time}`);
+    const eventDateTime = new Date(event.date);
     const [countdown, setCountdown] = useState(() => getCountdown(eventDateTime));
 
     useEffect(() => {

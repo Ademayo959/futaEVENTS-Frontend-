@@ -116,7 +116,7 @@ const CreateEventModal = ({ setIsModalVisible }) => {
                     </div>
                 </div>
 
-                <div className="px-6 py-4 sticky bottom-0 bg-red-600 dark:bg-[#1a2e1a] sm:static">
+                <div className="px-6 py-4 sticky bottom-0 dark:bg-[#1a2e1a] sm:static">
                     <div
                         onClick={isPosting ? undefined : postEvent}
                         className={`bg-bold-green text-white h-12 sm:h-10 items-center flex justify-center rounded-lg ${isPosting ? "opacity-60" : "cursor-pointer"}`}
